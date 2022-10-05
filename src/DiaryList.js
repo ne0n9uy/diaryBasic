@@ -1,6 +1,6 @@
 import DiaryItem from "./DiaryItem";
 
-const DiaryList=({onDelete,diarylist})=>{
+const DiaryList=({onEdit,onRemove,diarylist})=>{
     return (
     <div className="DiaryList">
         <h2>일기 리스트</h2>
@@ -12,7 +12,7 @@ const DiaryList=({onDelete,diarylist})=>{
                 // ==3개(아이템 개수)의 아이템 렌더링
                 <div key={it.id}>
                     {/* == diaryList.map(it,idx) + key={idx} */}
-                    <DiaryItem key={it.id} {...it} onDelete={onDelete}/>
+                    <DiaryItem key={it.id} {...it} onRemove={onRemove}/>
                 </div>
                 ))}
         </div>
